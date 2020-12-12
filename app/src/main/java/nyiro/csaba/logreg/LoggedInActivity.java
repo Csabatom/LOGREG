@@ -30,7 +30,7 @@ public class LoggedInActivity extends AppCompatActivity {
             }
         });
 
-        TXTview_felhasznaloNev.setText(getIntent().getStringExtra("nev"));
+        TXTview_felhasznaloNev.setText("Üdvözöllek " + getIntent().getStringExtra("nev") + "!");
     }
 
     private void init() {
