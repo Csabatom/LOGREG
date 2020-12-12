@@ -21,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button BTN_Regisztracio;
     Button BTN_Vissza;
 
-    DBHelper adatbazis;
+    Database adatbazis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +137,7 @@ public class RegisterActivity extends AppCompatActivity {
         editTXT_teljesNev = findViewById(R.id.editTXT_teljesNev);
         BTN_Regisztracio = findViewById(R.id.BTN_regisztracio);
         BTN_Vissza = findViewById(R.id.BTN_vissza);
-        adatbazis = new DBHelper(RegisterActivity.this);
+        adatbazis = new Database(RegisterActivity.this);
     }
 
     public void regisztracio() {

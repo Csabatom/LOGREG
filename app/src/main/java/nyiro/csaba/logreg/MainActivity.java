@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editTXT_jelszo;
     Button BTN_bejelentkezes;
     Button BTN_regisztracio;
-    DBHelper adatbazis;
+    Database adatbazis;
 
     SharedPreferences felhasznaloAdatok;
     SharedPreferences.Editor editor;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         BTN_bejelentkezes = findViewById(R.id.BTN_bejelentkezes);
         BTN_regisztracio = findViewById(R.id.BTN_regisztracio);
 
-        adatbazis = new DBHelper(MainActivity.this);
+        adatbazis = new Database(MainActivity.this);
 
         felhasznaloAdatok = getSharedPreferences("adatok", Context.MODE_PRIVATE);
         editor = felhasznaloAdatok.edit();

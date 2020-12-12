@@ -8,19 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class DBHelper extends SQLiteOpenHelper {
+public class Database extends SQLiteOpenHelper {
 
     public static final int Db_verzio = 1;
     public static final String Db_nev = "Felhasznalok.db";
-    public static final String FELHASZNALO_TABLA = "felhasznalo";
 
-    public static final String MEZO_ID = "id";
-    public static final String MEZO_EMAIL = "email";
-    public static final String MEZO_FELHASZNALONEV = "felhnev";
-    public static final String MEZO_JELSZO = "jelszo";
-    public static final String MEZO_TELJESNEV = "teljesnev";
-
-    public DBHelper(Context context) {
+    public Database(Context context) {
         super(context, Db_nev, null, Db_verzio);
     }
 
@@ -45,10 +38,10 @@ public class DBHelper extends SQLiteOpenHelper {
     public boolean Regisztracio(String email, String felhnev, String jelszo, String teljnev)  {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(MEZO_EMAIL, email);
-        values.put(MEZO_FELHASZNALONEV, felhnev);
-        values.put(MEZO_JELSZO, jelszo);
-        values.put(MEZO_TELJESNEV, teljnev);
+        values.put("email", email);
+        values.put("felhnev", felhnev);
+        values.put("jelszo", jelszo);
+        values.put("teljesnev", teljnev);
         long result = db.insert("felhasznalo", null, values);
 
         return result != -1;
