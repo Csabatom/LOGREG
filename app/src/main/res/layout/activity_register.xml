@@ -4,8 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".RegisterActivity"
     android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editTXT_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Teljes név" />
 
     <EditText
         android:id="@+id/editTXT_felhasznaloNev"
@@ -13,9 +21,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Felhasználónév"
-        android:layout_marginTop="50px"
-        android:layout_marginBottom="50px" />
+        android:hint="Teljes név" />
 
     <EditText
         android:id="@+id/editTXT_jelszo"
@@ -23,15 +29,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Jelszó" />
+        android:hint="Teljes név" />
 
-    <Button
-        android:id="@+id/BTN_bejelentkezes"
+    <EditText
+        android:id="@+id/editTXT_teljesNev"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bejelentkezés"
-        android:layout_marginTop="20px"
-        android:layout_marginBottom="20px"/>
+        android:ems="10"
+        android:hint="Teljes név" />
 
     <Button
         android:id="@+id/BTN_regisztracio"
@@ -39,4 +44,9 @@
         android:layout_height="wrap_content"
         android:text="Regisztráció" />
 
+    <Button
+        android:id="@+id/BTN_vissza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vissza" />
 </LinearLayout>
