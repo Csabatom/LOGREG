@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint="Teljes név" />
+        android:hint="Email" />
 
     <EditText
         android:id="@+id/editTXT_felhasznaloNev"
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Teljes név" />
+        android:hint="Felhasználónév" />
 
     <EditText
         android:id="@+id/editTXT_jelszo"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Teljes név" />
+        android:hint="Jelszó" />
 
     <EditText
         android:id="@+id/editTXT_teljesNev"
@@ -42,7 +42,8 @@
         android:id="@+id/BTN_regisztracio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Regisztráció" />
+        android:text="Regisztráció"
+        android:enabled="false"/>
 
     <Button
         android:id="@+id/BTN_vissza"
